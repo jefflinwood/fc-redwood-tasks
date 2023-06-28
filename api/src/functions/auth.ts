@@ -133,7 +133,7 @@ export const handler = async (
   }
 
   const authHandler = new DbAuthHandler(event, context, {
-  cors: { origin: process.env.REDWOOD_WEB_URL, credentials: true },
+    cors: { origin: process.env.REDWOOD_WEB_URL, credentials: true },
     // Provide prisma db client
     db: db,
 
@@ -163,7 +163,7 @@ export const handler = async (
 
       // If you need to allow other domains (besides the api side) access to
       // the dbAuth session cookie:
-      // Domain: 'example.com',
+      Domain: 'cloudfront.net',
     },
 
     forgotPassword: forgotPasswordOptions,
