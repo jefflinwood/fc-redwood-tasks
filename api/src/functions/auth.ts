@@ -133,6 +133,7 @@ export const handler = async (
   }
 
   const authHandler = new DbAuthHandler(event, context, {
+  cors: { origin: process.env.REDWOOD_WEB_URL, credentials: true },
     // Provide prisma db client
     db: db,
 
@@ -157,7 +158,7 @@ export const handler = async (
     cookie: {
       HttpOnly: true,
       Path: '/',
-      SameSite: 'Strict',
+      SameSite: process.env.NODE_ENV === 'development' ? 'Strict' : 'None',
       Secure: process.env.NODE_ENV !== 'development',
 
       // If you need to allow other domains (besides the api side) access to
