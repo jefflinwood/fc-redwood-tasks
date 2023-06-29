@@ -68,8 +68,8 @@
       ]
     },
     {
-      "id": "development",
-      "name": "Development",
+      "id": "preview",
+      "name": "Preview",
       "region": "us-west-2",
       "vpc": {
         "id": "vpc-0ddfc552c43b58eca"
