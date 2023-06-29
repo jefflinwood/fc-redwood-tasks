@@ -6,7 +6,7 @@ const HomePage = () => {
     <>
       <MetaTags title="Home" description="Home page" />
 
-      <h1>Welcome to the demo!</h1>
+      <h1>Welcome Redwood Community!</h1>
       <p>
         <Link to={routes.login()}>Login</Link>
         <br />
